@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700|Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/js.js"></script>
+    <title>Document</title>
+</head>
+<body onload="view.displayTodos()">
+
+<div class="container">
+
+    <main class="main">
+    
+        <div class="todo-items">
+
+            <div class="headline-buttons">
+                <h3 class="inline">Todo</h3>
+                <div class="sorting-buttons">
+                    <button class="sort-button" onclick="view.sortTodosAsc()">Sort A-Z</button>
+                    <button class="sort-button" onclick="view.sortTodosDesc()">Sort Z-A</button>
+                </div>
+            </div>
+    
+            <ul id="incompletedTodos">
+    
+            </ul>
+        </div>
+    
+        <div class="todo-items-completed">
+    
+            <h3>Completed</h3>
+            <ul id="completedTodos">
+    
+            </ul>
+        </div>
+
+        <div class="add-item">
+            <label for="addNewTextInput">Add new item</label>
+            <div class="button-move">
+                
+                <input type="text" id="addNewTextInput">
+                <button class="add-button" onclick="handlers.addTodo()">Add</button>
+
+            </div>
+            <p id="errorMessage"></p>
+        </div>
+
+
+    </main>
+</div>
+
+</body>
+</html>
